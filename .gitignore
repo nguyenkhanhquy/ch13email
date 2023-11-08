@@ -1,6 +1,5 @@
-.settings/
-build/
-src/main/java/META-INF/
-target/
+.settings
+build
+target
 .classpath
 .project
