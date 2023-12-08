@@ -1,9 +1,12 @@
 package murach.email;
 
-import java.io.*;
-import javax.servlet.*;
+import java.io.IOException;
+
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.*;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import murach.business.User;
 import murach.data.UserDB;
@@ -16,7 +19,7 @@ public class EmailListServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+
 		request.setCharacterEncoding("UTF-8");
 
 		String url = "/index.jsp";

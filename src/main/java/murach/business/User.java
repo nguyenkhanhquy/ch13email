@@ -12,9 +12,9 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "User")
 public class User implements Serializable {
-	
+
 	private static final long serialVersionUID = 1L;
-	
+
 	private Long userId;
     private String email;
     private String firstName;
@@ -22,7 +22,7 @@ public class User implements Serializable {
 
     @Id
     @Column(name = "UserId")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long getUserId() {
         return userId;
     }
@@ -30,7 +30,7 @@ public class User implements Serializable {
     public void setUserId(Long userId) {
         this.userId = userId;
     }
-    
+
     @Column(name = "Email")
     public String getEmail() {
         return email;
@@ -39,7 +39,7 @@ public class User implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
-    
+
     @Column(name = "FirstName")
     public String getFirstName() {
         return firstName;
